@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartório Moreira &amp; Costa – Serviço Único Notarial e Registral de Tocantínia/TO</title>
+  <meta name="google-site-verification" content="rkzv0psyoFpcdoKCCuq4t_kW8qlRKzrXZX9dUKY3Eko" />
+  <meta name="description" content="Cartório Moreira & Costa é o Serviço Único Notarial e Registral de Tocantínia/TO. Tabelionato de Notas, Registro de Imóveis, RCPN, RCPJ, RTD e Protesto de Títulos." />
+  <meta name="keywords" content="cartório, Tocantínia, Tocantins, tabelionato de notas, registro de imóveis, registro civil, protesto de títulos, escritura pública, procuração" />
+  <meta name="author" content="Cartório Moreira & Costa" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+
+    
+
+    
+    :root {
+      --navy: #0d1f3c;
+      --blue: #1a3a6b;
+      --gold: #c9a84c;
+      --gold-light: #e2c36b;
+      --gold-dark: #a88530;
+      --white: #ffffff;
+      --gray-light: #f5f5f5;
+      --gray: #e8e8e8;
+      --text-dark: #1a1a2e;
+      --text-muted: #555577;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(13,31,60,0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--gold);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-logo-text {
+      color: var(--white);
+      font-family: 'Playfair Display', serif;
+      font-size: 0.97rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .nav-logo-text span {
+      color: var(--gold);
+      font-size: 0.67rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      display: block;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.3rem;
+      list-style: none;
+    }
+
+    .nav-links li a, .nav-links li button {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 6px 11px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li button:hover { color: var(--gold); background: rgba(201,168,76,0.08); }
+
+    .nav-links li a.active,
+    .nav-links li button.active {
+      color: var(--gold);
+      background: rgba(201,168,76,0.12);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--navy) !important;
+      font-weight: 700 !important;
+      border-radius: 5px !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+    .nav-cta.active { background: var(--gold-light) !important; border-bottom: none !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--white); transition: all 0.3s;
+    }
+
+    /* ===== MOBILE MENU ===== */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: var(--navy);
+      border-top: 1px solid rgba(201,168,76,0.3);
+      padding: 1rem 2rem;
+      z-index: 999;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu button {
+      display: block; width: 100%;
+      background: none; border: none;
+      color: rgba(255,255,255,0.85);
+      text-align: left;
+      padding: 11px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.2s;
+    }
+    .mobile-menu button:last-child { border-bottom: none; }
+    .mobile-menu button:hover { color: var(--gold); }
+
+    /* ===== PAGES ===== */
+    .page {
+      display: none;
+      min-height: 100vh;
+      padding-top: 68px;
+    }
+    .page.active {
+      display: block;
+      animation: pageIn 0.45s ease;
+    }
+
+    @keyframes pageIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== HERO PAGE ===== */
+    #page-home {
+      padding-top: 68px !important;
+    }
+    #page-home.active {
+      display: block !important;
+    }
+    #page-home > section {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 55%, #1e4c8a 100%);
+      min-height: calc(100vh - 68px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 2rem 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    #page-home > section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 50%);
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold);
+      padding: 6px 18px; border-radius: 50px;
+      font-size: 0.76rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-crest {
+      width: 130px; height: 150px;
+      margin: 0 auto 1.8rem;
+      filter: drop-shadow(0 8px 24px rgba(201,168,76,0.3));
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      max-width: 860px;
+      margin-bottom: 0.9rem;
+    }
+    .hero-title span { color: var(--gold); }
+
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 2.3vw, 1.2rem);
+      color: rgba(255,255,255,0.78);
+      max-width: 620px;
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+
+    .hero-divider {
+      width: 70px; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0.8rem auto 1.8rem;
+    }
+
+    .hero-text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.73);
+      max-width: 760px;
+      line-height: 1.82;
+      margin-bottom: 2rem;
+    }
+
+    .hero-team {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      margin-bottom: 2.2rem;
+    }
+    .hero-team p { color: rgba(255,255,255,0.82); font-size: 1.25rem; }
+    .hero-team strong { color: var(--gold); }
+
+    .hero-buttons {
+      display: flex; gap: 1rem;
+      flex-wrap: wrap; justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+      padding: 13px 30px; border-radius: 6px;
+      text-decoration: none; border: none;
+      font-weight: 700; font-size: 0.92rem;
+      letter-spacing: 0.03em;
+      transition: all 0.3s; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+    }
+
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.38);
+      color: var(--white); background: none;
+      padding: 13px 30px; border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600; font-size: 0.92rem;
+      transition: all 0.3s; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    .hero-stats {
+      display: flex; gap: 3rem;
+      position: relative; z-index: 1;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700; color: var(--gold);
+    }
+    .hero-stat-label {
+      font-size: 0.72rem; color: rgba(255,255,255,0.55);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+
+    /* ===== COMMON SECTION STYLES ===== */
+    .sec {
+      padding: 80px 2rem;
+    }
+    .sec-alt { background: var(--gray-light); }
+    .sec-dark { background: var(--navy); }
+    .sec-dark2 { background: linear-gradient(135deg, var(--navy), var(--blue)); }
+    .sec-gold { background: linear-gradient(135deg, #c9a84c, #e2c36b, #a88530); }
+
+    .container { max-width: 1180px; margin: 0 auto; }
+
+    .section-header { text-align: center; margin-bottom: 3.2rem; }
+    .section-tag {
+      display: inline-block; color: var(--gold);
+      font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      margin-bottom: 0.7rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.8vw, 2.6rem);
+      font-weight: 700; color: var(--navy); line-height: 1.2;
+      margin-bottom: 0.9rem;
+    }
+    .section-title.light { color: var(--white); }
+    .section-title span { color: var(--blue); }
+    .section-title span.gold { color: var(--gold); }
+    .section-line {
+      width: 55px; height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1rem;
+    }
+    .section-desc {
+      color: var(--text-muted); font-size: 0.97rem;
+      max-width: 580px; margin: 0 auto; line-height: 1.7;
+    }
+    .section-desc.light { color: rgba(255,255,255,0.65); }
+
+    /* ===== PAGE HERO BANNERS (sub-pages) ===== */
+    .page-banner {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      padding: 60px 2rem 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-banner::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 120%, rgba(201,168,76,0.1), transparent 60%);
+    }
+    .page-banner-tag {
+      display: inline-block;
+      background: rgba(201,168,76,0.18);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold); padding: 5px 16px;
+      border-radius: 50px; font-size: 0.73rem;
+      font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; margin-bottom: 1rem;
+      position: relative; z-index: 1;
+    }
+    .page-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800; color: var(--white);
+      position: relative; z-index: 1;
+      margin-bottom: 0.8rem;
+    }
+    .page-banner h1 span { color: var(--gold); }
+    .page-banner p {
+      color: rgba(255,255,255,0.72); font-size: 1rem;
+      max-width: 580px; margin: 0 auto;
+      line-height: 1.65; position: relative; z-index: 1;
+    }
+    .page-banner-line {
+      width: 60px; height: 3px;
+      background: var(--gold);
+      margin: 1rem auto 0;
+      position: relative; z-index: 1;
+    }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      background: #eef2f8;
+      border-bottom: 1px solid var(--gray);
+      padding: 10px 2rem;
+    }
+    .breadcrumb-inner {
+      max-width: 1180px; margin: 0 auto;
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.78rem; color: var(--text-muted);
+    }
+    .breadcrumb-inner button {
+      background: none; border: none;
+      color: var(--blue); cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; font-weight: 600;
+      transition: color 0.2s;
+    }
+    .breadcrumb-inner button:hover { color: var(--gold); }
+    .breadcrumb-inner span { color: var(--text-muted); }
+
+    /* ===== MVV ===== */
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .mvv-card {
+      background: var(--white); border-radius: 12px;
+      padding: 2.4rem 2rem; text-align: center;
+      box-shadow: 0 4px 20px rgba(13,31,60,0.07);
+      border-top: 4px solid var(--gold);
+      transition: all 0.3s; position: relative; overflow: hidden;
+    }
+    .mvv-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(13,31,60,0.13); }
+    .mvv-icon { font-size: 2.4rem; margin-bottom: 1rem; }
+    .mvv-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 1rem;
+    }
+    .mvv-text { color: var(--text-muted); font-size: 0.9rem; line-height: 1.75; }
+    .values-list { list-style: none; text-align: left; margin-top: 1rem; }
+    .values-list li {
+      display: flex; align-items: center; gap: 10px;
+      padding: 6px 0; font-size: 0.88rem;
+      color: var(--text-dark); font-weight: 500;
+      border-bottom: 1px solid var(--gray);
+    }
+    .values-list li:last-child { border-bottom: none; }
+    .values-list li::before { content: '✔'; color: var(--gold); font-weight: 700; }
+
+    /* ===== DIFERENCIAIS ===== */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.4rem;
+    }
+    .diff-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 12px; padding: 1.8rem 1.4rem;
+      text-align: center; transition: all 0.3s;
+    }
+    .diff-card:hover {
+      background: rgba(201,168,76,0.1);
+      border-color: var(--gold); transform: translateY(-5px);
+    }
+    .diff-icon { font-size: 2.1rem; margin-bottom: 0.9rem; }
+    .diff-title { color: var(--white); font-weight: 600; font-size: 0.9rem; line-height: 1.45; }
+    .diff-highlight {
+      background: rgba(201,168,76,0.12);
+      border-color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ===== SERVICES GRID (landing page for services) ===== */
+    .services-overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+    .service-overview-card {
+      background: var(--white);
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(13,31,60,0.07);
+      border: 1px solid var(--gray);
+      padding: 2.2rem 1.8rem;
+      transition: all 0.35s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-overview-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--navy), var(--gold));
+      transform: scaleX(0);
+      transition: transform 0.35s;
+    }
+    .service-overview-card:hover { transform: translateY(-7px); box-shadow: 0 16px 48px rgba(13,31,60,0.13); }
+    .service-overview-card:hover::before { transform: scaleX(1); }
+    .soc-icon { font-size: 2.8rem; margin-bottom: 1rem; }
+    .soc-tag {
+      display: inline-block;
+      background: rgba(26,58,107,0.08);
+      color: var(--blue); padding: 3px 12px;
+      border-radius: 50px; font-size: 0.68rem;
+      font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; margin-bottom: 0.8rem;
+    }
+    .soc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 0.7rem;
+    }
+    .soc-desc { color: var(--text-muted); font-size: 0.85rem; line-height: 1.65; margin-bottom: 1.2rem; }
+    .soc-list { list-style: none; }
+    .soc-list li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 0.8rem; color: var(--text-dark);
+      padding: 4px 0; line-height: 1.4;
+    }
+    .soc-list li::before { content: '▸'; color: var(--gold); flex-shrink: 0; }
+    .soc-btn {
+      margin-top: 1.3rem;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--navy); color: var(--white);
+      padding: 9px 20px; border-radius: 6px;
+      font-size: 0.8rem; font-weight: 600; border: none;
+      cursor: pointer; transition: all 0.3s;
+      font-family: 'Inter', sans-serif;
+    }
+    .soc-btn:hover { background: var(--blue); transform: translateX(3px); }
+
+    /* ===== INDIVIDUAL SERVICE PAGE ===== */
+    .service-page-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .service-sidebar {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 2rem;
+      position: sticky;
+      top: 90px;
+    }
+    .service-sidebar-icon { font-size: 3.5rem; text-align: center; margin-bottom: 1rem; }
+    .service-sidebar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--white); text-align: center;
+      margin-bottom: 1.5rem; line-height: 1.3;
+    }
+    .service-sidebar-info {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 8px; padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .service-sidebar-info p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.82rem; line-height: 1.6;
+    }
+    .service-sidebar-info strong { color: var(--gold); }
+    .back-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold); padding: 10px 18px;
+      border-radius: 6px; font-size: 0.82rem;
+      font-weight: 600; cursor: pointer; width: 100%;
+      justify-content: center; margin-top: 1rem;
+      font-family: 'Inter', sans-serif; transition: all 0.3s;
+    }
+    .back-btn:hover { background: rgba(201,168,76,0.2); }
+
+    .service-main-content { }
+    .service-main-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 0.5rem;
+    }
+    .service-main-content .lead {
+      color: var(--text-muted); font-size: 1rem;
+      line-height: 1.75; margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid var(--gray);
+    }
+    .service-items-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .service-items-title::before {
+      content: '';
+      width: 4px; height: 24px;
+      background: var(--gold); border-radius: 2px;
+    }
+    .service-items-list { list-style: none; }
+    .service-items-list li {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--gray);
+      font-size: 0.92rem; color: var(--text-dark); line-height: 1.55;
+    }
+    .service-items-list li:last-child { border-bottom: none; }
+    .service-items-list li .bullet {
+      width: 28px; height: 28px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      color: var(--gold); font-size: 0.75rem;
+      font-weight: 700; flex-shrink: 0;
+    }
+    .service-cta-box {
+      margin-top: 2.5rem;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border-radius: 14px; padding: 2rem;
+      text-align: center;
+    }
+    .service-cta-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--white);
+      margin-bottom: 0.7rem;
+    }
+    .service-cta-box p { color: rgba(255,255,255,0.65); font-size: 0.88rem; margin-bottom: 1.2rem; }
+
+    /* ===== DIGITAL PAGE ===== */
+    .digital-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .digital-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,168,76,0.22);
+      border-radius: 14px; padding: 2rem;
+      text-align: center; transition: all 0.3s;
+    }
+    .digital-card:hover {
+      background: rgba(201,168,76,0.1);
+      border-color: var(--gold); transform: translateY(-4px);
+    }
+    .digital-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .digital-title { color: var(--white); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .digital-text { color: rgba(255,255,255,0.58); font-size: 0.82rem; line-height: 1.55; }
+
+    /* ===== CONTACT PAGE ===== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .contact-info-card {
+      background: var(--navy);
+      border-radius: 16px; padding: 2.5rem;
+    }
+    .contact-info-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; color: var(--white);
+      margin-bottom: 2rem;
+    }
+    .contact-item {
+      display: flex; align-items: flex-start;
+      gap: 15px; margin-bottom: 1.5rem;
+    }
+    .contact-icon-box {
+      width: 44px; height: 44px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 10px;
+      display: flex; align-items: center;
+      justify-content: center; font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .contact-item-text { }
+    .contact-item-label {
+      font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--gold);
+      font-weight: 700; margin-bottom: 3px;
+    }
+    .contact-item-value {
+      color: rgba(255,255,255,0.82); font-size: 0.9rem; line-height: 1.5;
+    }
+    .contact-item-value a { color: var(--gold-light); text-decoration: none; }
+    .contact-team-box {
+      margin-top: 2rem; padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .contact-team-box h4 {
+      color: var(--gold); font-size: 0.7rem;
+      text-transform: uppercase; letter-spacing: 0.3em;
+      margin-bottom: 1rem;
+    }
+    .team-member {
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px; padding: 0.8rem 1rem;
+      margin-bottom: 0.6rem;
+    }
+    .team-member-name {
+      color: var(--white); font-weight: 600; font-size: 0.88rem ;
+    }
+    .team-member-role {
+      color: rgba(255,255,255,0.5); font-size: 0.78rem;
+    }
+
+    .contact-form-card {
+      background: var(--gray-light);
+      border-radius: 16px; padding: 2.5rem;
+    }
+    .contact-form-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label {
+      display: block; font-size: 0.8rem; font-weight: 600;
+      color: var(--navy); margin-bottom: 5px;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%; padding: 11px 14px;
+      border: 2px solid var(--gray);
+      border-radius: 8px; font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      background: var(--white); color: var(--text-dark);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--blue); }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .form-submit {
+      width: 100%; padding: 13px;
+      background: var(--navy); color: var(--white);
+      border: none; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 700;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: all 0.3s; display: flex;
+      align-items: center; justify-content: center; gap: 8px;
+    }
+    .form-submit:hover { background: var(--blue); transform: translateY(-1px); }
+
+    .whatsapp-big-btn {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      background: #25D366; color: white;
+      padding: 16px 32px; border-radius: 10px;
+      font-size: 1.05rem; font-weight: 700;
+      text-decoration: none; margin-top: 1.5rem;
+      transition: all 0.3s; border: none; cursor: pointer;
+      font-family: 'Inter', sans-serif; width: 100%;
+    }
+    .whatsapp-big-btn:hover { background: #128c7e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.75);
+      padding: 50px 2rem 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 3rem;
+      max-width: 1180px; margin: 0 auto 2.5rem;
+    }
+    .footer-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700; color: var(--white);
+    }
+    .footer-brand-sub { font-size: 0.9rem; color: var(--gold); letter-spacing: 0.05em; }
+    .footer-brand p { font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.58); margin: 1rem 0 1.2rem; }
+    .footer-title {
+      color: var(--gold); font-weight: 700; font-size: 1rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 1rem; padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.55rem; }
+    .footer-links button {
+      background: none; border: none;
+      color: rgba(255,255,255,0.62);
+      font-size: 1rem; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.2s; text-align: left;
+    }
+    .footer-links button:hover { color: var(--gold); }
+    .footer-contact-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-bottom: 0.9rem; font-size: 1rem;
+    }
+    .footer-contact-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .footer-contact-text { color: rgba(255,255,255,0.65); line-height: 1.5; font-size: 1rem; }
+    .footer-contact-text a { color: var(--gold); text-decoration: none; font-size: 1rem; }
+    .footer-divider {
+      border: none; border-top: 1px solid rgba(255,255,255,0.09);
+      margin: 0 auto 1.3rem; max-width: 1180px;
+    }
+    .footer-bottom {
+      max-width: 1180px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; font-size: 0.76rem;
+      color: rgba(255,255,255,0.38); flex-wrap: wrap; gap: 0.8rem;
+    }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .whatsapp-float {
+      position: fixed; bottom: 26px; right: 26px;
+      z-index: 999;
+      background: #25D366; color: white;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.4);
+      text-decoration: none; transition: all 0.3s;
+      animation: pulse 2.5s infinite;
+    }
+    .whatsapp-float:hover { background: #128c7e; transform: scale(1.1); }
+    .wf-tooltip {
+      position: absolute; right: 65px;
+      background: #25D366; color: white;
+      padding: 6px 13px; border-radius: 20px;
+      font-size: 0.76rem; font-weight: 600;
+      white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .whatsapp-float:hover .wf-tooltip { opacity: 1; }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 4px 18px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 4px 30px rgba(37,211,102,0.65); }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mvv-grid { grid-template-columns: 1fr; }
+      .diff-grid { grid-template-columns: repeat(2,1fr); }
+      .services-overview-grid { grid-template-columns: 1fr 1fr; }
+      .service-page-content { grid-template-columns: 1fr; }
+      .service-sidebar { position: static; }
+      .digital-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-stats { gap: 1.5rem; }
+    }
+    @media (max-width: 600px) {
+      .sec { padding: 55px 1.2rem; }
+      .diff-grid { grid-template-columns: 1fr; }
+      .services-overview-grid { grid-template-columns: 1fr; }
+      .digital-grid { grid-template-columns: 1fr; }
+      nav { padding: 0 1rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="goPage('home')">
+    <!-- Brasão Direito mini (navbar) -->
+    <svg width="40" height="48" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round">
+        <path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/>
+        <ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+      </g>
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round">
+        <path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/>
+        <ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+      </g>
+      <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/>
+      <rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/>
+      <rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+      <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/>
+      <path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/>
+      <path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <circle cx="100" cy="68" r="5" fill="#c9a84c"/>
+      <circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+      <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+    </svg>
+    <div class="nav-logo-text">
+      Cartório Moreira &amp; Costa
+      <span>Serviço Único Notarial e Registral</span>
+    </div>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><button onclick="goPage('home')" id="nav-home">Início</button></li>
+    <li><button onclick="goPage('missao')" id="nav-missao">Missão &amp; Valores</button></li>
+    <li><button onclick="goPage('diferenciais')" id="nav-diferenciais">Diferenciais</button></li>
+    <li><button onclick="goPage('servicos')" id="nav-servicos">Serviços</button></li>
+    <li><button onclick="goPage('digital')" id="nav-digital">Digital</button></li>
+    <li><button onclick="goPage('contato')" id="nav-contato" class="nav-cta">Contato</button></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button onclick="goPage('home');closeMenu()">🏛️ Início</button>
+  <button onclick="goPage('missao');closeMenu()">🎯 Missão &amp; Valores</button>
+  <button onclick="goPage('diferenciais');closeMenu()">⭐ Diferenciais</button>
+  <button onclick="goPage('servicos');closeMenu()">⚖️ Nossos Serviços</button>
+  <button onclick="goPage('digital');closeMenu()">💻 Atendimento Digital</button>
+  <button onclick="goPage('contato');closeMenu()">📞 Contato</button>
+</div>
+
+<!-- ===================== PAGE: HOME ===================== -->
+<div class="page active" id="page-home">
+  <section>
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(201,168,76,0.08),transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(201,168,76,0.06),transparent 50%);pointer-events:none;"></div>
+
+    <div class="hero-badge" style="position:relative;z-index:1;">⚖ Serviço Único Notarial e Registral • Tocantínia/TO</div>
+
+    <!-- Brasão do Direito / Balança da Justiça -->
+    <svg class="hero-crest" style="position:relative;z-index:1;" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+      <!-- Ramo esquerdo de louros -->
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round">
+        <path d="M54 185 Q44 175 38 162"/>
+        <path d="M51 179 Q37 173 32 158" fill="#c9a84c" opacity="0.3" stroke="none"/>
+        <ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" fill="#c9a84c" opacity="0.25"/>
+        <ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" fill="#c9a84c" opacity="0.25"/>
+        <ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" fill="#c9a84c" opacity="0.25"/>
+        <ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" fill="#c9a84c" opacity="0.25"/>
+        <ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" fill="#c9a84c" opacity="0.25"/>
+        <ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" fill="#c9a84c" opacity="0.25"/>
+        <path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/>
+        <!-- leaf outlines left -->
+        <ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+      </g>
+      <!-- Ramo direito de louros (espelhado) -->
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round">
+        <path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/>
+        <ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        <ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+      </g>
+
+      <!-- Coluna / haste da balança -->
+      <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/>
+      <!-- Base da haste -->
+      <rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/>
+      <rect x="88" y="158" width="24" height="4" fill="#c9a84c" rx="2"/>
+
+      <!-- Braço da balança -->
+      <rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+
+      <!-- Fios das balanças -->
+      <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+
+      <!-- Prato esquerdo -->
+      <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/>
+      <path d="M40 100 Q60 108 80 100" fill="#c9a84c" opacity="0.15"/>
+      <path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+
+      <!-- Prato direito -->
+      <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/>
+      <path d="M120 100 Q140 108 160 100" fill="#c9a84c" opacity="0.15"/>
+      <path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+
+      <!-- Pivô central -->
+      <circle cx="100" cy="68" r="5" fill="#c9a84c"/>
+      <circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+
+      <!-- Estrela / topo -->
+      <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+
+      <!-- Texto base -->
+      <text x="100" y="210" text-anchor="middle" font-size="7.5" fill="#c9a84c" font-family="Georgia" letter-spacing="1.5" font-weight="bold">CARTÓRIO MOREIRA &amp; COSTA</text>
+      <text x="100" y="223" text-anchor="middle" font-size="6" fill="#c9a84c" opacity="0.7" font-family="Georgia" letter-spacing="1">TOCANTÍNIA • TOCANTINS</text>
+
+      <!-- Linha decorativa base -->
+      <line x1="40" y1="196" x2="160" y2="196" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+      <line x1="55" y1="200" x2="145" y2="200" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
+    </svg>
+
+    <h1 class="hero-title" style="position:relative;z-index:1;">Cartório <span>Moreira &amp; Costa</span></h1>
+    <p class="hero-subtitle" style="position:relative;z-index:1;">Segurança jurídica, agilidade e excelência em todos os atos notariais e registrais.</p>
+    <div class="hero-divider" style="position:relative;z-index:1;"></div>
+
+    <p class="hero-text" style="position:relative;z-index:1;">
+      O Cartório Moreira &amp; Costa é o Serviço Único Notarial e Registral do município de Tocantínia/TO,
+      responsável pelas atribuições de Tabelionato de Notas, Registro de Imóveis, Registro Civil das Pessoas Naturais (RCPN),
+      Registro Civil das Pessoas Jurídicas (RCPJ), Registro de Títulos e Documentos (RTD) e Protesto de Títulos.
+      Somos referência em segurança jurídica, atendimento especializado e excelência técnica.
+      Atendemos com responsabilidade, imparcialidade, transparência e total observância às normas federais, estaduais e aos Provimentos do CNJ.
+    </p>
+
+        <div class="hero-team" style="position:relative; index 1;">
+      <p><strong>Tabeliã/Registradora:</strong> Sandra Cristina Moreira Costa <strong> <br><br>Suboficiala: </strong>Gilvânia Galvão Rodrigues - Portaria 001/2014
+        <br>        
+        <br>
+        <strong>Escrevente Autorizado:</strong> Alessandro Moreira Costa – Portaria 001/2019 <br><br>
+      <strong>Escrevente:</strong> Renata Bazilio Rosa - Portaria 001/2022</p>
+      <br>
+      <p style="margin-top:0.4rem;font-size:0.78rem;color:rgba(255,255,255,0.5);">Cada ato realizado com dedicação, respeito ao usuário e compromisso absoluto com a legalidade.</p>
+    </div>
+
+    <div class="hero-buttons" style="position:relative;z-index:1;">
+      <button class="btn-primary" onclick="goPage('servicos')">⚖ Nossos Serviços</button>
+      <button class="btn-outline" onclick="goPage('contato')">Entre em Contato</button>
+    </div>
+
+    <div class="hero-stats" style="position:relative;z-index:1;">
+      <div class="hero-stat"><div class="hero-stat-num">6+</div><div class="hero-stat-label">Serviços Notariais</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Legal &amp; Seguro</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Único</div><div class="hero-stat-label">Cartório da Cidade</div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== PAGE: MISSÃO ===================== -->
+<div class="page" id="page-missao">
+  <div class="page-banner">
+    <svg class="banner-crest" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:96px;margin:0 auto 1.2rem;display:block;filter:drop-shadow(0 4px 12px rgba(201,168,76,0.4));position:relative;z-index:1;">
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round">
+        <path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/>
+        <ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+      </g>
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round">
+        <path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/>
+        <ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+      </g>
+      <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/><rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/><rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+      <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/><line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <circle cx="100" cy="68" r="5" fill="#c9a84c"/><circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+      <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+      <line x1="40" y1="196" x2="160" y2="196" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+    </svg>
+    <div class="page-banner-tag">Nossa Essência</div>
+    <h1>Missão, Visão <span>&amp; Valores</span></h1>
+    <p>Os princípios que guiam cada ato e atendimento do Cartório Moreira &amp; Costa.</p>
+    <div class="page-banner-line"></div>
+  </div>
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <button onclick="goPage('home')">Início</button>
+      <span>›</span>
+      <span>Missão, Visão &amp; Valores</span>
+    </div>
+  </div>
+  <div class="sec sec-alt">
+    <div class="container">
+      <div class="mvv-grid">
+        <div class="mvv-card">
+          <div class="mvv-icon">🎯</div>
+          <h3 class="mvv-title">Missão</h3>
+          <p class="mvv-text">Garantir segurança jurídica, agilidade e atendimento humanizado em todos os serviços notariais e registrais, proporcionando tranquilidade e proteção aos cidadãos, empresas e instituições.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-icon">🔭</div>
+          <h3 class="mvv-title">Visão</h3>
+          <p class="mvv-text">Ser referência no Tocantins pela qualidade, eficiência e modernidade dos serviços extrajudiciais, reconhecidos pela excelência técnica e pelo compromisso com a justiça e a cidadania.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-icon">⭐</div>
+          <h3 class="mvv-title">Valores</h3>
+          <ul class="values-list">
+            <li>Ética</li>
+            <li>Transparência</li>
+            <li>Celeridade</li>
+            <li>Responsabilidade</li>
+            <li>Profissionalismo</li>
+            <li>Respeito ao usuário</li>
+            <li>Excelência técnica</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Frase final page -->
+  <div class="sec" style="background:linear-gradient(135deg,var(--navy),var(--blue)); text-align:center;">
+    <div class="container">
+      <div style="font-size:3rem;margin-bottom:1rem;">⚖️</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--white);margin-bottom:1rem;">Cartório Moreira &amp; Costa</h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:1rem;max-width:600px;margin:0 auto 2rem;line-height:1.7;font-style:italic;">Segurança jurídica, agilidade e excelência em todos os atos notariais e registrais. Um serviço único, dedicado a você e à sua família.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-primary" onclick="goPage('servicos')">🏛️ Ver Serviços</button>
+        <button class="btn-outline" onclick="goPage('contato')">📞 Fale Conosco</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: DIFERENCIAIS ===================== -->
+<div class="page" id="page-diferenciais">
+  <div class="page-banner">
+    <svg class="banner-crest" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:96px;margin:0 auto 1.2rem;display:block;filter:drop-shadow(0 4px 12px rgba(201,168,76,0.4));position:relative;z-index:1;">
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/><rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/><rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+      <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/><line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <circle cx="100" cy="68" r="5" fill="#c9a84c"/><circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+      <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+      <line x1="40" y1="196" x2="160" y2="196" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+    </svg>
+    <div class="page-banner-tag">Por que nos escolher</div>
+    <h1>Nossos <span>Diferenciais</span></h1>
+    <p>O que faz do Cartório Moreira &amp; Costa a melhor escolha para você.</p>
+    <div class="page-banner-line"></div>
+  </div>
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <button onclick="goPage('home')">Início</button>
+      <span>›</span>
+      <span>Diferenciais</span>
+    </div>
+  </div>
+  <div class="sec sec-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Por que escolher</div>
+        <h2 class="section-title light">Por que escolher o <span class="gold">Cartório Moreira &amp; Costa?</span></h2>
+        <div class="section-line"></div>
+        <p class="section-desc light">Diferenciais que fazem a diferença no seu atendimento.</p>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-icon">🤝</div>
+          <div class="diff-title">Atendimento rápido, organizado e humanizado</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">👩‍⚖️</div>
+          <div class="diff-title">Equipe altamente especializada em atos simples e complexos</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">🔒</div>
+          <div class="diff-title">Segurança jurídica em primeiro lugar</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">💻</div>
+          <div class="diff-title">Atos eletrônicos via e-Notariado e Centrais</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">📋</div>
+          <div class="diff-title">Orientação completa para advogados, empresas e cidadãos</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">🏛️</div>
+          <div class="diff-title">Estrutura moderna e integrada em um único local</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">⚡</div>
+          <div class="diff-title">Agilidade real: menos burocracia, mais eficiência</div>
+        </div>
+        <div class="diff-card diff-highlight">
+          <div style="text-align:center;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">⚖</div>
+            <div class="diff-title" style="color:var(--gold);font-size:1rem;">Único cartório completo da Cidade</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <p style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold);font-style:italic;margin-bottom:1.5rem;">"No Cartório Moreira &amp; Costa, você resolve tudo em um só lugar."</p>
+        <button class="btn-primary" onclick="goPage('servicos')">Ver Todos os Serviços</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: SERVIÇOS (visão geral) ===================== -->
+<div class="page" id="page-servicos">
+  <div class="page-banner">
+    <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:96px;margin:0 auto 1.2rem;display:block;filter:drop-shadow(0 4px 12px rgba(201,168,76,0.4));position:relative;z-index:1;">
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/><rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/><rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+      <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/><line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <circle cx="100" cy="68" r="5" fill="#c9a84c"/><circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+      <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+      <line x1="40" y1="196" x2="160" y2="196" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+    </svg>
+    <div class="page-banner-tag">Serviços Completos</div>
+    <h1>Nossos <span>Serviços</span></h1>
+    <p>Atendimento completo em todas as áreas notariais e registrais em um único cartório.</p>
+    <div class="page-banner-line"></div>
+  </div>
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <button onclick="goPage('home')">Início</button>
+      <span>›</span>
+      <span>Serviços</span>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="container">
+      <div class="services-overview-grid">
+
+        <!-- Card 1: Tabelionato -->
+        <div class="service-overview-card" onclick="goService('notas')">
+          <div class="soc-icon">📜</div>
+          <div class="soc-tag">Tabelionato de Notas</div>
+          <div class="soc-title">Tabelionato de Notas</div>
+          <div class="soc-desc">Fé pública em todos os atos jurídicos. Escrituras, procurações, atas, testamentos e muito mais.</div>
+          <ul class="soc-list">
+            <li>Escrituras públicas diversas</li>
+            <li>Procurações e substabelecimentos</li>
+            <li>Atas notariais e testamentos</li>
+            <li>Reconhecimento de firma e autenticações</li>
+          </ul>
+          <button class="soc-btn">Ver detalhes →</button>
+        </div>
+
+        <!-- Card 2: Imóveis -->
+        <div class="service-overview-card" onclick="goService('imoveis')">
+          <div class="soc-icon">🏠</div>
+          <div class="soc-tag">Registro de Imóveis</div>
+          <div class="soc-title">Registro de Imóveis</div>
+          <div class="soc-desc">Segurança e publicidade para seu patrimônio imobiliário. Matrículas, registros e certidões.</div>
+          <ul class="soc-list">
+            <li>Abertura de matrícula</li>
+            <li>Compra e venda, doação, usucapião</li>
+            <li>Hipoteca e alienação fiduciária</li>
+            <li>Certidões diversas</li>
+          </ul>
+          <button class="soc-btn">Ver detalhes →</button>
+        </div>
+
+        <!-- Card 3: RCPN -->
+        <div class="service-overview-card" onclick="goService('rcpn')">
+          <div class="soc-icon">👤</div>
+          <div class="soc-tag">RCPN</div>
+          <div class="soc-title">Registro Civil – Pessoas Naturais</div>
+          <div class="soc-desc">Registro dos principais eventos da vida civil: nascimento, casamento, divórcio e óbito.</div>
+          <ul class="soc-list">
+            <li>Nascimento e casamento</li>
+            <li>Divórcio extrajudicial</li>
+            <li>Reconhecimento de paternidade</li>
+            <li>Certidões físicas e eletrônicas</li>
+          </ul>
+          <button class="soc-btn">Ver detalhes →</button>
+        </div>
+
+        <!-- Card 4: RCPJ -->
+        <div class="service-overview-card" onclick="goService('rcpj')">
+          <div class="soc-icon">🏢</div>
+          <div class="soc-tag">RCPJ</div>
+          <div class="soc-title">Registro Civil – Pessoas Jurídicas</div>
+          <div class="soc-desc">Legalidade e publicidade para associações, fundações e organizações religiosas.</div>
+          <ul class="soc-list">
+            <li>Registro de associações e fundações</li>
+            <li>Estatutos, atas e alterações</li>
+            <li>Eleição de diretoria</li>
+            <li>Dissolução e extinção</li>
+          </ul>
+          <button class="soc-btn">Ver detalhes →</button>
+        </div>
+
+        <!-- Card 5: RTD -->
+        <div class="service-overview-card" onclick="goService('rtd')">
+          <div class="soc-icon">📄</div>
+          <div class="soc-tag">RTD</div>
+          <div class="soc-title">Registro de Títulos e Documentos</div>
+          <div class="soc-desc">Publicidade, conservação e autenticidade para seus contratos e documentos.</div>
+          <ul class="soc-list">
+            <li>Registro de contratos particulares</li>
+            <li>Penhores e garantias</li>
+            <li>Notificações extrajudiciais</li>
+            <li>Documentos eletrônicos</li>
+          </ul>
+          <button class="soc-btn">Ver detalhes →</button>
+        </div>
+
+        <!-- Card 6: Protesto -->
+        <div class="service-overview-card" onclick="goService('protesto')">
+          <div class="soc-icon">📋</div>
+          <div class="soc-tag">Protesto de Títulos</div>
+          <div class="soc-title">Protesto de Títulos</div>
+          <div class="soc-desc">Instrumento eficaz de cobrança extrajudicial. Protestamos, cancelamos e emitimos certidões.</div>
+          <ul class="soc-list">
+            <li>Cheques, duplicatas, notas promissórias</li>
+            <li>Boletos e contratos</li>
+            <li>Cancelamento de protesto</li>
+            <li>Sustação de protesto</li>
+          </ul>
+          <button class="soc-btn">Ver detalhes →</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: SERVIÇO DETALHE ===================== -->
+<div class="page" id="page-servico-detalhe">
+  <div class="page-banner" id="servico-banner">
+    <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width:70px;height:84px;margin:0 auto 1rem;display:block;filter:drop-shadow(0 4px 12px rgba(201,168,76,0.4));position:relative;z-index:1;">
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/><rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/><rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+      <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/><line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <circle cx="100" cy="68" r="5" fill="#c9a84c"/><circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+      <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+      <line x1="40" y1="196" x2="160" y2="196" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+    </svg>
+    <div class="page-banner-tag" id="servico-tag"></div>
+    <h1 id="servico-title"></h1>
+    <p id="servico-subtitle"></p>
+    <div class="page-banner-line"></div>
+  </div>
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <button onclick="goPage('home')">Início</button>
+      <span>›</span>
+      <button onclick="goPage('servicos')">Serviços</button>
+      <span>›</span>
+      <span id="servico-breadcrumb"></span>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="container">
+      <div class="service-page-content">
+        <div class="service-sidebar">
+          <div class="service-sidebar-icon" id="servico-icon-sidebar"></div>
+          <div class="service-sidebar-title" id="servico-sidebar-title"></div>
+          <div class="service-sidebar-info">
+            <p id="servico-sidebar-info"></p>
+          </div>
+          <div class="service-sidebar-info" style="background:rgba(201,168,76,0.08);border-color:rgba(201,168,76,0.3);">
+            <p><strong>📍 Localização:</strong><br/><span style="color:rgba(255,255,255,0.7);">Tocantínia – Tocantins</span></p>
+          </div>
+          <div class="service-sidebar-info">
+            <p><strong>⏱️ Atendimento:</strong><br/><span style="color:rgba(255,255,255,0.7);">Segunda a Sexta</span></p>
+          </div>
+          <button class="back-btn" onclick="goPage('servicos')">← Voltar aos Serviços</button>
+          <button class="btn-primary" style="width:100%;margin-top:0.8rem;justify-content:center;" onclick="goPage('contato')">💬 Solicitar Atendimento</button>
+<button id="btn-doc-notas" class="btn-primary" style="display: none; width:100%; margin-top:0.8rem; justify-content:center;" onclick="goPage('documentacao')">
+  📄 Ver Documentação Necessária</button>                   
+                   
+        </div>
+        <div class="service-main-content">
+          <h2 id="servico-main-title"></h2>
+          <p class="lead" id="servico-lead"></p>
+          <div class="service-items-title">Serviços Disponíveis</div>
+          <ul class="service-items-list" id="servico-items"></ul>
+          <div class="service-cta-box">
+            <h3>Precisa deste serviço?</h3>
+            <p>Entre em contato conosco para orientação completa e agendamento sem complicações.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+              <button class="btn-primary" onclick="goPage('contato')">📞 Falar Conosco</button>
+              <button class="btn-outline" onclick="goPage('servicos')">← Ver Outros Serviços</button> 
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: DIGITAL ===================== -->
+<div class="page" id="page-digital">
+  <div class="page-banner">
+    <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:96px;margin:0 auto 1.2rem;display:block;filter:drop-shadow(0 4px 12px rgba(201,168,76,0.4));position:relative;z-index:1;">
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/><rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/><rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+      <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/><line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <circle cx="100" cy="68" r="5" fill="#c9a84c"/><circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+      <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+      <line x1="40" y1="196" x2="160" y2="196" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+    </svg>
+    <div class="page-banner-tag">Tecnologia &amp; Inovação</div>
+    <h1>Atendimento <span>Digital e Moderno</span></h1>
+    <p>O Cartório Moreira &amp; Costa disponibiliza diversos serviços eletrônicos para facilitar sua vida.</p>
+    <div class="page-banner-line"></div>
+  </div>
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <button onclick="goPage('home')">Início</button>
+      <span>›</span>
+      <span>Atendimento Digital</span>
+    </div>
+  </div>
+  <div class="sec sec-dark2">
+    <div class="container">
+      <div class="digital-grid">
+        <div class="digital-card">
+          <div class="digital-icon">✍️</div>
+          <div class="digital-title">Assinaturas Digitais</div>
+          <div class="digital-text">Assinaturas com certificado e-Notariado, com plena validade jurídica e reconhecimento nacional.</div>
+        </div>
+        <div class="digital-card">
+          <div class="digital-icon">📱</div>
+          <div class="digital-title">Certidões Eletrônicas</div>
+          <div class="digital-text">Emissão de certidões digitais com segurança, autenticidade garantida e acesso rápido.</div>
+        </div>
+        <div class="digital-card">
+          <div class="digital-icon">📝</div>
+          <div class="digital-title">Atas Online</div>
+          <div class="digital-text">Lavramento de atas notariais por meio eletrônico com plena validade jurídica.</div>
+        </div>
+        <div class="digital-card">
+          <div class="digital-icon">💬</div>
+          <div class="digital-title">Orientações via WhatsApp</div>
+          <div class="digital-text">Tire dúvidas e receba orientações diretamente pelo WhatsApp de forma ágil e prática.</div>
+        </div>
+        <div class="digital-card">
+          <div class="digital-icon">📤</div>
+          <div class="digital-title">Envio Digital de Documentos</div>
+          <div class="digital-text">Envie documentos de forma prática e segura sem precisar sair de casa.</div>
+        </div>
+        <div class="digital-card">
+          <div class="digital-icon">🔍</div>
+          <div class="digital-title">Consultas Eletrônicas</div>
+          <div class="digital-text">Acompanhe o andamento dos seus atos de forma rápida e totalmente transparente.</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:3.5rem;">
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.25);border-radius:16px;padding:2.5rem;max-width:600px;margin:0 auto;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">🚀</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:0.8rem;">Modernidade a serviço da lei</h3>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;">Utilizamos as mais modernas plataformas digitais do sistema notarial brasileiro, incluindo o e-Notariado do Colégio Notarial do Brasil.</p>
+          <button class="btn-primary" onclick="goPage('contato')">Saiba mais → Entre em contato</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: CONTATO ===================== -->
+<div class="page" id="page-contato">
+  <div class="page-banner">
+    <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:96px;margin:0 auto 1.2rem;display:block;filter:drop-shadow(0 4px 12px rgba(201,168,76,0.4));position:relative;z-index:1;">
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"><path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/><ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/><ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/></g>
+      <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/><rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/><rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+      <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/><line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/><path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <circle cx="100" cy="68" r="5" fill="#c9a84c"/><circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+      <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+      <line x1="40" y1="196" x2="160" y2="196" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+    </svg>
+    <div class="page-banner-tag">Fale Conosco</div>
+    <h1>Contato &amp; <span>Localização</span></h1>
+    <p>Estamos prontos para atendê-lo com excelência, agilidade e segurança jurídica.</p>
+    <div class="page-banner-line"></div>
+  </div>
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <button onclick="goPage('home')">Início</button>
+      <span>›</span>
+      <span>Contato</span>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Info -->
+        <div class="contact-info-card">
+          <h3>Informações de Contato</h3>
+
+          <div class="contact-item">
+            <div class="contact-icon-box">📍</div>
+            <div class="contact-item-text">
+              <div class="contact-item-label">Localização</div>
+              <div class="contact-item-value">Rua Teodomiro Carneiro, 
+          <br>N. 126, Centro, Tocantínia - TO<br/><small style="color:rgba(255,255,255,0.45);">Serviço Único Notarial e Registral</small></div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-box">📧</div>
+            <div class="contact-item-text">
+              <div class="contact-item-label">E-mail</div>
+              <div class="contact-item-value"><a href="mailto:cartoriocrctocantinia@gmail.com">cartoriocrctocantinia@gmail.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-box">⏱️</div>
+            <div class="contact-item-text">
+              <div class="contact-item-label">Horário de Atendimento</div>
+              <div class="contact-item-value">Segunda a Sexta<br/><small style="color:rgba(255,255,255,0.45);">08:00h às 11:00h e 13:00h às 17:30h</small></div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5563984366577" target="_blank" class="whatsapp-big-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Falar pelo WhatsApp
+          </a>
+
+          <div class="contact-team-box">
+            <h4>Nossa Equipe</h4>
+            <div class="team-member">
+              <div class="team-member-name">Sandra Cristina Moreira Costa</div>
+              <div class="team-member-role">Tabeliã / Registradora</div>
+            </div>
+             <div class="team-member">
+              <div class="team-member-name">Gilvânia Galvão Rodrigues </div>
+              <div class="team-member-role">Suboficiala - Portaria 001/2014</div>
+              </div>
+            <div class="team-member">
+              <div class="team-member-name">Alessandro Moreira Costa </div>
+              <div class="team-member-role">Escrevente Autorizado – Portaria 001/2019</div> 
+              </div> 
+               <div class="team-member">
+              <div class="team-member-name">Renata Bazilio Rosa - </div>
+              <div class="team-member-role">Escrevente - Portaria 001/2022</div>
+              
+            </div>
+          </div>
+        </div>
+
+
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<div class="contact-form-card">
+  <h3>Envie sua Mensagem</h3>
+  <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">Preencha o formulário e nossa equipe retornará em breve com as orientações necessárias.</p>
+  
+  <form id="form-contato">
+    <div class="form-group">
+      <label>Nome Completo *</label>
+      <input type="text" name="nome" placeholder="Seu nome completo" required />
+    </div>
+    <div class="form-group">
+      <label>E-mail *</label>
+      <input type="email" name="email" placeholder="seu@email.com" required />
+    </div>
+    <div class="form-group">
+      <label>Telefone / WhatsApp</label>
+      <input type="tel" name="telefone" placeholder="(63) 984366577" />
+    </div>
+    <div class="form-group">
+      <label>Serviço de Interesse</label>
+      <select name="servico">
+        <option value="">Selecione um serviço...</option>
+        <option value="Tabelionato de Notas">Tabelionato de Notas</option>
+        <option value="Registro de Imóveis">Registro de Imóveis</option>
+        <option value="Registro Civil – RCPN">Registro Civil – RCPN</option>
+        <option value="Registro Civil – RCPJ">Registro Civil – RCPJ</option>
+        <option value="Registro de Títulos e Documentos">Registro de Títulos e Documentos</option>
+        <option value="Protesto de Títulos">Protesto de Títulos</option>
+        <option value="Atendimento Digital">Atendimento Digital</option>
+        <option value="Outro">Outro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Mensagem *</label>
+      <textarea name="mensagem" placeholder="Descreva sua necessidade ou dúvida..." required></textarea>
+    </div> 
+    <button type="submit" class="form-submit" id="btn-enviar">
+      📨 Enviar Mensagem
+    </button>
+  </form>
+
+  <div id="form-success" style="display:none;margin-top:1rem;background:#d4edda;border:1px solid #c3e6cb;border-radius:8px;padding:1rem;color:#155724;font-size:0.88rem;text-align:center;">
+    ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+  </div>
+</div>
+
+<script type="text/javascript">
+  // INICIALIZE COM SUA PUBLIC KEY (Se você já não tiver feito isso em outro lugar)
+  // Substitua 'SUA_PUBLIC_KEY' pela sua chave que fica em Account > API Keys no EmailJS
+  emailjs.init("nMQHPVejKVRDmUSV0");
+
+  const form = document.getElementById('form-contato');
+  const btn = document.getElementById('btn-enviar');
+  const divSucesso = document.getElementById('form-success');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Muda o texto do botão para mostrar que está carregando
+    btn.innerText = 'Enviando...';
+    divSucesso.style.display = 'none'; // Esconde a mensagem de sucesso se tentar enviar de novo
+
+    // Manda a ordem pro EmailJS
+    emailjs.sendForm('service_mzqh88e', 'template_3qfahrk', this)
+      .then(function() {
+          // Se der certo
+          form.reset(); // Limpa o formulário
+          btn.innerText = '📨 Enviar Mensagem'; // Volta o texto do botão
+          divSucesso.style.display = 'block'; // Mostra a sua caixinha verde de sucesso
+          
+          // Opcional: Esconde a mensagem de sucesso depois de 5 segundos
+          setTimeout(() => { divSucesso.style.display = 'none'; }, 5000);
+      }, function(erro) {
+          // Se der erro
+          alert('Falha ao enviar a mensagem. Erro: ' + JSON.stringify(erro));
+          btn.innerText = '📨 Enviar Mensagem';
+      });
+  });
+</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER (global) ===================== -->
+<footer>
+<div class="page" id="page-documentacao">
+    <div class="page-banner">
+      <h1>Documentação <span>Necessária</span></h1>
+      <p>Confira a lista de documentos exigidos para o atendimento.</p>
+      <div class="page-banner-line"></div>
+    </div>
+
+    <div class="sec">
+      <div class="container" style="max-width: 800px;">
+        
+        <div style="background: var(--white); border-radius: 14px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(13,31,60,0.07); border-top: 4px solid var(--gold);">
+          
+          <h2 style="font-family: 'Playfair Display', serif; color: var(--navy); margin-bottom: 1.5rem; border-bottom: 2px solid var(--gray); padding-bottom: 10px;">
+            Pessoa Física
+          </h2>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 2.5rem;">
+            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: var(--text-dark); line-height: 1.6;">
+              <span style="color: var(--gold);">▸</span>
+              Fotocópia do RG e CPF, do(s) mandantes e do mandatário (procurador), se este estiver presente (e apresentação do original);
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: var(--text-dark); line-height: 1.6;">
+              <span style="color: var(--gold);">▸</span>
+              Certidão de casamento (se casado, separado, divorciado ou viúvo).
+            </li>
+          </ul>
+
+          <h2 style="font-family: 'Playfair Display', serif; color: var(--navy); margin-bottom: 1.5rem; border-bottom: 2px solid var(--gray); padding-bottom: 10px;">
+            Pessoa Jurídica
+          </h2>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: var(--text-dark); line-height: 1.6;">
+              <span style="color: var(--gold);">▸</span>
+              Número do CNPJ;
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: var(--text-dark); line-height: 1.6;">
+              <span style="color: var(--gold);">▸</span>
+              Fotocópia autenticada do contrato social, última alteração e alteração em que conste modificação de diretoria, ou consolidação do contrato social. O estatuto social, sua fotocópia autenticada e a ata de eleição da diretoria;
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: var(--text-dark); line-height: 1.6;">
+              <span style="color: var(--gold);">▸</span>
+              RG, CPF, profissão, estado civil e residência do diretor(es), sócio(s) ou procurador(es) que assinará(ão) a escritura;
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: var(--text-dark); line-height: 1.6;">
+              <span style="color: var(--gold);">▸</span>
+              Certidão da junta comercial de que não há outras alterações.
+            </li>
+          </ul>
+
+          <div style="text-align: center; margin-top: 2.5rem;">
+            <button class="btn-primary" onclick="goPage('servicos')" style="display: inline-flex; width: auto; padding: 12px 30px;">
+              ← Voltar para Serviços
+            </button>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:1rem;">
+        <svg width="38" height="46" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round">
+            <path d="M55 190 Q38 185 30 170 Q24 155 26 138 Q26 120 33 104 Q38 92 48 84" stroke="#c9a84c" stroke-width="2" fill="none"/>
+            <ellipse cx="42" cy="168" rx="9" ry="5" transform="rotate(-35,42,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="36" cy="155" rx="9" ry="5" transform="rotate(-45,36,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="32" cy="141" rx="8" ry="4.5" transform="rotate(-50,32,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="30" cy="127" rx="8" ry="4.5" transform="rotate(-55,30,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="31" cy="112" rx="7" ry="4" transform="rotate(-45,31,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="35" cy="99" rx="7" ry="4" transform="rotate(-30,35,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+          </g>
+          <g fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round">
+            <path d="M145 190 Q162 185 170 170 Q176 155 174 138 Q174 120 167 104 Q162 92 152 84" stroke="#c9a84c" stroke-width="2" fill="none"/>
+            <ellipse cx="158" cy="168" rx="9" ry="5" transform="rotate(35,158,168)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="164" cy="155" rx="9" ry="5" transform="rotate(45,164,155)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="168" cy="141" rx="8" ry="4.5" transform="rotate(50,168,141)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="170" cy="127" rx="8" ry="4.5" transform="rotate(55,170,127)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="169" cy="112" rx="7" ry="4" transform="rotate(45,169,112)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+            <ellipse cx="165" cy="99" rx="7" ry="4" transform="rotate(30,165,99)" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+          </g>
+          <rect x="98" y="55" width="4" height="100" fill="#c9a84c" rx="2"/>
+          <rect x="80" y="153" width="40" height="5" fill="#c9a84c" rx="2.5"/>
+          <rect x="44" y="68" width="112" height="4" fill="#c9a84c" rx="2"/>
+          <line x1="60" y1="72" x2="60" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+          <line x1="140" y1="72" x2="140" y2="100" stroke="#c9a84c" stroke-width="1.5"/>
+          <ellipse cx="60" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/>
+          <path d="M40 100 Q60 108 80 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+          <ellipse cx="140" cy="103" rx="20" ry="5" fill="none" stroke="#c9a84c" stroke-width="2"/>
+          <path d="M120 100 Q140 108 160 100" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+          <circle cx="100" cy="68" r="5" fill="#c9a84c"/>
+          <circle cx="100" cy="68" r="3" fill="#0d1f3c"/>
+          <polygon points="100,20 104,34 118,34 107,43 111,57 100,48 89,57 93,43 82,34 96,34" fill="#c9a84c"/>
+        </svg>
+        <div>
+          <div class="footer-brand-name">Cartório Moreira &amp; Costa</div>
+          <div class="footer-brand-sub">Serviço Único Notarial e Registral</div>
+        </div>
+      </div>
+      <p>Referência em segurança jurídica, atendimento especializado e excelência técnica no município de Tocantínia/TO.</p>
+      <div style="display:flex;gap:0.7rem;">
+        <a href="mailto:cartoriocrctocantinia@gmail.com" style="background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);color:var(--gold);padding:7px 14px;border-radius:6px;font-size:0.78rem;text-decoration:none;">📧 E-mail</a>
+        <a href="https://wa.me/5563984366577" target="_blank" style="background:#25D366;color:white;padding:7px 14px;border-radius:6px;font-size:0.78rem;text-decoration:none;font-weight:600;">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">Páginas</div>
+      <ul class="footer-links">
+        <li><button onclick="goPage('home')">🏛️ Início</button></li>
+        <li><button onclick="goPage('missao')">🎯 Missão &amp; Valores</button></li>
+        <li><button onclick="goPage('diferenciais')">⭐ Diferenciais</button></li>
+        <li><button onclick="goPage('servicos')">⚖️ Nossos Serviços</button></li>
+        <li><button onclick="goPage('digital')">💻 Atendimento Digital</button></li>
+        <li><button onclick="goPage('contato')">📞 Contato</button></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">Contato e Localização</div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📍Rua Teodomiro Carneiro,<br>Nº 126, Centro - Tocantínia - TO.
+        <div class="footer-contact-icon"><br>
+        <img src="https://i.pinimg.com/736x/ba/ab/fe/baabfef6ad5ebe65d3f5a976b7d67263.jpg" width="320" height="200" alt="Cartório Moreira e Costa"><br>
+          <small>Cartório Moreira e Costa</small><br>
+      </div>
+      <br>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📧</span>
+        <div class="footer-contact-text"><a href="mailto:cartoriocrctocantinia@gmail.com">cartoriocrctocantinia@gmail.com</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">💬</span>
+        <div class="footer-contact-text"><a href="https://wa.me/5563984366577" target="_blank">WhatsApp – Clique para conversar</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">⏱️</span>
+        <div class="footer-contact-text"><a>Segunda a Sexta -</a></div>
+        <div class="footer-contact-text"><a>08:00h às 11:00h<br>13:00h às 17:30h</a></div>
+      </div>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="footer-bottom">
+    <div>© 2026 Cartório Moreira &amp; Costa – Todos os direitos reservados</div>
+    <div>Serviço Único Notarial e Registral • Tocantínia/TO</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5563984366577" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <span class="wf-tooltip">Fale conosco</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+// ===== DATA =====
+const services = {
+  notas: {
+    tag: 'Tabelionato de Notas',
+    title: 'Tabelionato de <span>Notas</span>',
+    subtitle: 'Fé pública em todos os seus atos jurídicos. Realizamos escrituras, procurações, atas e muito mais.',
+    breadcrumb: 'Tabelionato de Notas',
+    icon: '📜',
+    sidebarTitle: 'Tabelionato de Notas',
+    sidebarInfo: '⚖️ Atos praticados com fé pública pelo Tabelião/Registrador, garantindo validade jurídica plena e segurança em todas as operações.',
+    mainTitle: 'Tabelionato de Notas',
+    lead: 'O Tabelionato de Notas é responsável pela lavratura de escrituras públicas e demais atos que exigem fé pública, conferindo segurança jurídica e validade às declarações de vontade das partes. Todos os atos são lavrados com rigor técnico e observância às normas do CNJ.',
+    items: [
+      'Escrituras públicas de compra e venda, doação, inventário, partilha, adjudicação, união estável, dissolução, divórcio, confissão de dívida, cessão de direitos, permuta, declarações e demais atos',
+      'Procurações públicas e substabelecimentos',
+      'Atas notariais',
+      'Testamentos públicos',
+      'Aprovação de testamento cerrado',
+      'Reconhecimento de firma (por semelhança e por autenticidade)',
+      'Autenticação de documentos e cópias',
+      'Notificações extrajudiciais',
+      'Assinatura digital via plataforma e-Notariado (CNB)'
+    ]
+  },
+  imoveis: {
+    tag: 'Registro de Imóveis',
+    title: 'Registro de <span>Imóveis</span>',
+    subtitle: 'Segurança e publicidade para seu patrimônio imobiliário. Matrículas, registros e certidões.',
+    breadcrumb: 'Registro de Imóveis',
+    icon: '🏠',
+    sidebarTitle: 'Registro de Imóveis',
+    sidebarInfo: '🏠 O Registro de Imóveis confere publicidade, autenticidade, segurança e eficácia aos atos jurídicos sobre imóveis.',
+    mainTitle: 'Registro de Imóveis',
+    lead: 'O Registro de Imóveis é o órgão responsável pelo registro e averbação dos atos relacionados a imóveis, conferindo publicidade, autenticidade, segurança e eficácia aos direitos reais. A propriedade imóvel só se transmite com o registro.',
+    items: [
+      'Abertura de matrícula',
+      'Registro de títulos translativos: compra e venda, doação, usucapião, adjudicação compulsória etc.',
+      'Registro de hipoteca convencional e legal',
+      'Alienação fiduciária de imóveis',
+      'Retificações de área e descrição (Lei 6.015/73 e Lei 10.931/04)',
+      'Georreferenciamento de imóveis rurais',
+      'Averbação de construção, demolição e reformas (habite-se)',
+      'Averbação de contratos, penhoras e indisponibilidades',
+      'Certidões diversas: matrícula atualizada, ônus reais, inteiro teor, negativa de ônus'
+    ]
+  },
+  rcpn: {
+    tag: 'RCPN',
+    title: 'Registro Civil das <span>Pessoas Naturais</span>',
+    subtitle: 'Registro dos principais eventos da vida civil: nascimento, casamento, divórcio, óbito e mais.',
+    breadcrumb: 'Registro Civil – RCPN',
+    icon: '👤',
+    sidebarTitle: 'Registro Civil das Pessoas Naturais',
+    sidebarInfo: '👤 O RCPN registra os fatos mais importantes da vida humana, garantindo existência civil e pleno exercício de direitos.',
+    mainTitle: 'Registro Civil das Pessoas Naturais (RCPN)',
+    lead: 'O Registro Civil das Pessoas Naturais é responsável pelo registro dos principais fatos e atos jurídicos da vida humana, garantindo a existência civil da pessoa e o pleno exercício de seus direitos fundamentais e civis.',
+    items: [
+      'Registro de nascimento (1ª via gratuita)',
+      'Habilitação e registro de casamento',
+      'Divórcio extrajudicial consensual',
+      'Registro de óbito',
+      'Reconhecimento voluntário de paternidade',
+      'Retificações de registro civil',
+      'Averbações gerais (separação, divórcio, adoção, mudança de nome etc.)',
+      'Certidões físicas e eletrônicas de todos os atos'
+    ]
+  },
+  rcpj: {
+    tag: 'RCPJ',
+    title: 'Registro Civil das <span>Pessoas Jurídicas</span>',
+    subtitle: 'Legalidade e publicidade para associações, fundações e organizações religiosas.',
+    breadcrumb: 'Registro Civil – RCPJ',
+    icon: '🏢',
+    sidebarTitle: 'Registro Civil das Pessoas Jurídicas',
+    sidebarInfo: '🏢 O RCPJ confere personalidade jurídica a associações, fundações e organizações religiosas, garantindo sua existência legal.',
+    mainTitle: 'Registro Civil das Pessoas Jurídicas (RCPJ)',
+    lead: 'O Registro Civil das Pessoas Jurídicas é o serviço responsável pelo registro de associações, fundações, organizações religiosas e outras entidades sem fins lucrativos, conferindo-lhes personalidade jurídica e publicidade de seus atos.',
+    items: [
+      'Registro de associações civis, fundações e organizações religiosas',
+      'Registro de estatutos sociais',
+      'Registro de atas e alterações estatutárias',
+      'Registro de eleição e posse de diretoria',
+      'Certidões de existência, de estatuto e de diretoria',
+      'Averbações diversas',
+      'Dissolução e extinção de pessoas jurídicas'
+    ]
+  },
+  rtd: {
+    tag: 'RTD',
+    title: 'Registro de Títulos <span>e Documentos</span>',
+    subtitle: 'Publicidade, conservação e autenticidade para seus contratos e documentos.',
+    breadcrumb: 'Títulos e Documentos – RTD',
+    icon: '📄',
+    sidebarTitle: 'Registro de Títulos e Documentos',
+    sidebarInfo: '📄 O RTD confere publicidade e conservação a contratos, documentos e atos jurídicos, produzindo efeitos contra terceiros.',
+    mainTitle: 'Registro de Títulos e Documentos (RTD)',
+    lead: 'O Registro de Títulos e Documentos (RTD) é o serviço que confere publicidade, autenticidade e conservação a contratos, documentos e atos jurídicos, permitindo que produzam efeitos erga omnes (contra todos).',
+    items: [
+      'Registro de contratos particulares de qualquer natureza',
+      'Registro de penhores e garantias (penhor mercantil, agrícola, pecuário etc.)',
+      'Publicidade e conservação de documentos importantes',
+      'Notificações extrajudiciais',
+      'Registro de documentos eletrônicos',
+      'Certidões diversas de registro e negatividade'
+    ]
+  },
+  protesto: {
+    tag: 'Protesto de Títulos',
+    title: 'Protesto de <span>Títulos</span>',
+    subtitle: 'Instrumento eficaz de cobrança extrajudicial. Protestamos, cancelamos e emitimos certidões.',
+    breadcrumb: 'Protesto de Títulos',
+    icon: '📋',
+    sidebarTitle: 'Protesto de Títulos',
+    sidebarInfo: '📋 O Protesto é o instrumento extrajudicial de cobrança que formaliza a inadimplência do devedor, produzindo efeitos jurídicos imediatos.',
+    mainTitle: 'Protesto de Títulos',
+    lead: 'O Protesto de Títulos é o ato formal e solene pelo qual se comprova a inadimplência e o descumprimento de obrigação originada em títulos e outros documentos de dívida. É instrumento eficaz de cobrança e prova de inadimplemento.',
+    items: [
+      'Recebimento e protesto de cheques sem fundos',
+      'Protesto de duplicatas mercantis e de serviços',
+      'Protesto de notas promissórias',
+      'Protesto de boletos e contratos vencidos',
+      'Cancelamento de protesto (mediante pagamento ou determinação judicial)',
+      'Sustação/anulação de protesto por via judicial ou extrajudicial',
+      'Certidões de protestos e negatividade'
+    ]
+  }
+};
+
+// ===== NAVIGATION =====
+let currentPage = 'home';
+
+function goPage(pageId) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+  // Show target
+  const target = document.getElementById('page-' + pageId);
+  if (target) {
+    target.classList.add('active');
+    currentPage = pageId;
+  }
+
+  // Update nav active states
+  document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+  const activeNav = document.getElementById('nav-' + pageId);
+  if (activeNav) activeNav.classList.add('active');
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goService(serviceId) {
+  const s = services[serviceId];
+  if (!s) return;
+  
+
+  // Populate page
+  
+  document.getElementById('servico-tag').textContent = s.tag;
+  document.getElementById('servico-title').innerHTML = s.title;
+  document.getElementById('servico-subtitle').textContent = s.subtitle;
+  document.getElementById('servico-breadcrumb').textContent = s.breadcrumb;
+  document.getElementById('servico-icon-sidebar').textContent = s.icon;
+  document.getElementById('servico-sidebar-title').textContent = s.sidebarTitle;
+  document.getElementById('servico-sidebar-info').innerHTML = '<strong>' + s.tag + ':</strong><br/><span style="color:rgba(255,255,255,0.7);">' + s.sidebarInfo.replace(/^[^\s]+\s/, '') + '</span>';
+  document.getElementById('servico-main-title').textContent = s.mainTitle;
+  document.getElementById('servico-lead').textContent = s.lead;
+
+  // Build items list
+  const ul = document.getElementById('servico-items');
+  ul.innerHTML = s.items.map((item, i) =>
+    `<li><span class="bullet">${i+1}</span>${item}</li>`
+  ).join('');
+
+  // Navigate to detail page
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-servico-detalhe').classList.add('active');
+
+  // Update nav
+  document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+  document.getElementById('nav-servicos').classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// Close mobile menu on outside click
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+
+// Form submit
+function submitForm(e) {
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'block';
+  e.target.reset();
+  setTimeout(() => {
+    document.getElementById('form-success').style.display = 'none';
+  }, 5000);
+}
+
+// Init nav active
+document.getElementById('nav-home').classList.add('active');
+</script>
+</body>
+</html>
